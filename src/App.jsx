@@ -48,7 +48,7 @@ export default function MetarInterpreter() {
     const timeout = setTimeout(() => controller.abort(), 30000);
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
